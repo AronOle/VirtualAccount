@@ -1,0 +1,24 @@
+class Account():
+    
+    def __init__(self,owner,balance=0):
+        
+        self.owner = owner
+        self.balance = balance
+    
+    def deposit(self,dem_amt):
+        
+        self.balance = self.balance + dem_amt
+        print(f' Added £{dem_amt} to the balance')
+        
+    def withdraw (self,wid_amt):
+        
+        if self.balance >= wid_amt:
+            self.balance = self.balance - wid_amt
+            print(f'Withdraw  of £{wid_amt} Accepted')
+        else:
+            print('Declined - Not enough Founs')
+        
+    def __str__(self):
+        
+        return f'Owner: {self.owner} \nBalance : £{self.balance}'
+   
